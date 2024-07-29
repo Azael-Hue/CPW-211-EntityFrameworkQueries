@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace CPW_211_EntityFrameworkQueries.Models;
 
+[DebuggerDisplay("Name: {VendorName,nq} - {VendorState,nq}")]
 public partial class Vendor
 {
     public int VendorId { get; set; }
