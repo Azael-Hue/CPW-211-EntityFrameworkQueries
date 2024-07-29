@@ -41,7 +41,7 @@ public partial class ApContext : DbContext
             => optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=AP");
         }
 
-        optionsBuilder.LogTo(Message => Debug.WriteLine(Message), new[] {DbLoggerCategory.Database.Command.Name});
+        optionsBuilder.LogTo(Message => Debug.WriteLine(Message), new[] {DbLoggerCategory.Query.Name});
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
