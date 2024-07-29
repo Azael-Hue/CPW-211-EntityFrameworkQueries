@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             btnSelectAllVendors = new Button();
-            button2 = new Button();
+            btnAllCaliVendors = new Button();
             button3 = new Button();
             SuspendLayout();
             // 
@@ -43,14 +43,15 @@
             btnSelectAllVendors.UseVisualStyleBackColor = true;
             btnSelectAllVendors.Click += btnSelectAllVendors_Click;
             // 
-            // button2
+            // btnAllCaliVendors
             // 
-            button2.Location = new Point(45, 107);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btnAllCaliVendors.Location = new Point(45, 107);
+            btnAllCaliVendors.Name = "btnAllCaliVendors";
+            btnAllCaliVendors.Size = new Size(466, 23);
+            btnAllCaliVendors.TabIndex = 1;
+            btnAllCaliVendors.Text = "SELECT * FROM Vendros Where VendorState = 'CA' ORDER BY VendorName ASC";
+            btnAllCaliVendors.UseVisualStyleBackColor = true;
+            btnAllCaliVendors.Click += btnAllCaliVendors_Click;
             // 
             // button3
             // 
@@ -67,7 +68,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(btnAllCaliVendors);
             Controls.Add(btnSelectAllVendors);
             Name = "Form1";
             Text = "Form1";
@@ -77,7 +78,7 @@
         #endregion
 
         private Button btnSelectAllVendors;
-        private Button button2;
+        private Button btnAllCaliVendors;
         private Button button3;
     }
 }
